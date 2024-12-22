@@ -1,0 +1,211 @@
+body {
+    overflow-x: hidden;
+    margin: 0%;
+    padding: 0;
+    width: 100vw;
+    background-color: 	FloralWhite;
+}
+
+
+.p1, .room1{
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* 使元素淡入顯示 */
+}
+
+.cover img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.p1{
+    font-size: 50px;
+    text-align: center;
+    font-family: "Noto Serif TC", serif;
+    margin: 60px;
+}
+
+.room1{
+    display: flex;
+    margin: 100px 200px;
+    height: 500px;  
+}
+
+.roomDetail1{
+    flex: 1;
+    font-family: "Noto Serif TC", serif;
+    font-size: 25px;
+    background-color:AntiqueWhite;
+    padding-left: 50px;
+}
+
+.p2{
+    font-size: 40px;
+}
+
+.div1 p{
+    display: inline-block;
+    padding-right: 15px;
+    margin: 5px;
+}
+
+.p3{
+    border-right: rgb(0, 0, 0) solid 3px;
+}
+
+.p4{
+    padding-right:5px;
+    margin-right:50px;
+}
+
+.p5{
+    border-left: 10px black solid;
+}
+
+.a{
+    text-decoration: none;
+    color: black;
+    padding: 5px 15px;
+    border: black solid 2px;
+    margin-right: 50px;
+    float: right;
+    font-size: 20px;
+}
+
+.a:hover{
+    text-decoration: dashed;
+    background-color:coral;
+    color: white;
+    transition-duration: 0.5s
+}
+
+.roomImage{
+    flex: 1;
+}
+
+.roomImage img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+#navbar {
+    z-index: 1500;
+    position: fixed;
+    height: 80px;
+    width: 100vw;
+    top: 0px;
+    left: 0;
+}
+
+nav{
+    position: fixed;
+    width: 100vw;
+}
+
+#navbar {
+    z-index: 1000;
+    height: 80px;
+    top: 0px;
+    left: 0;
+}
+
+#house img {
+    margin: -20px;
+    width: 100px;
+}
+
+nav {
+    font-size: 23px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.349), rgba(0, 0, 0, 0));
+    box-shadow: 0 4px 6px rgba(190, 136, 136, 0.753);
+    /* 輕微的陰影 */
+    padding: 50px 1px;
+    justify-content: center;
+    /* 水平居中內容 */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
+    box-shadow: none;
+    /* 頂部時無陰影 */
+}
+
+nav.scrolled {
+    padding: 20px 1px;
+    background-color: rgba(0, 0, 0, 1);
+    /* 滾動後變為不透明的黑色 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    /* 增加陰影 */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    /* 使列表項水平排列 */
+    align-items: center;
+    /* 垂直居中 */
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 10px 20px;
+    color: rgb(250, 250, 250);
+}
+
+nav ul li #house {
+    margin-right: 40vw;
+}
+
+nav ul li a:hover {
+    text-decoration: none;
+}
+
+.page-top {
+    position: fixed;
+    bottom: 35px;
+    right: 5px;
+    background-color: rgb(247, 247, 247,0);
+    text-decoration: none;
+    color: rgb(83, 7, 7);
+    font-size: 32px;
+    writing-mode: vertical-rl;
+    z-index: 1000; /* 確保按鈕在最上層顯示 */
+    text-orientation: mixed;
+    border-top: black solid 10px;
+    padding-top: 5px;
+}
+
+.page-top:hover {
+    color: rgb(0, 0, 0);
+}
+
+#contactDetail{
+    flex:1;
+    font-size: 30px;
+    padding: 50px;
+    border-left: rgb(170, 166, 166) solid 2px;
+    margin-left: 100px;
+    display: flex;
+}
+
+#contactDetail div{
+    font-family: "Noto Serif TC", serif;
+}
+
+#contact{
+    font-size: 70px; /* 根据需要调整字体大小 */
+    margin-left: 100px;
+    margin-top: 100px;
+}
+
+.vacation{
+    width:200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10%;
+    margin-left: 100px;
+    margin-top:200px;
+}
+.design{
+    color: gray;
+    text-align: center;
+    margin-bottom: 30px;
+}

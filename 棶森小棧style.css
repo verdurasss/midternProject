@@ -1,0 +1,434 @@
+body {
+    overflow-x: hidden;
+    margin: 0%;
+    padding: 0;
+    width: 100vw;
+    background-color: FloralWhite;
+}
+
+.page-top {
+    position: fixed;
+    bottom: 35px;
+    right: 5px;
+    background-color: rgb(247, 247, 247, 0);
+    text-decoration: none;
+    color: rgb(83, 7, 7);
+    font-size: 32px;
+    display: none;
+    /* 預設隱藏 */
+    flex-direction: column;
+    align-items: center;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    z-index: 1000;
+    /* 確保按鈕在最上層顯示 */
+}
+
+.page-top:hover {
+    color: rgb(0, 0, 0);
+}
+
+
+/* 覆蓋整個畫面的白色背景 */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    /* 白色背景 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    z-index: 9999;
+    transition: opacity 1s ease;
+}
+
+/* 設定圖片的初始狀態為透明 */
+.overlay img {
+    opacity: 0;
+    /* 初始圖片不可見 */
+    transition: opacity 1s ease;
+    /* 1秒內淡入淡出 */
+    width: 200px;
+}
+
+/* 當圖片顯示時，將其變得可見 */
+.overlay.visible img {
+    opacity: 1;
+    /* 淡入圖片 */
+}
+
+/* 淡出圖片 */
+.overlay.hidden {
+    opacity: 0;
+    /* 淡出背景和圖片 */
+}
+
+.navbar {
+    position: relative;
+    /* //設定成選單的相對定位父元素 */
+}
+
+#navbar {
+    z-index: 1000;
+    position: fixed;
+    height: 80px;
+    max-width: 960px;
+    /* 使用百分比避免橫向滾動條 */
+    top: 0px;
+    left: 0;
+}
+
+#navbar img {
+    margin: -20px;
+    width: 100px;
+}
+
+nav {
+    font-size: 23px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.349), rgba(0, 0, 0, 0));
+    box-shadow: 0 4px 6px rgba(190, 136, 136, 0.753);
+    /* 輕微的陰影 */
+    padding: 50px 1px;
+    justify-content: center;
+    /* 水平居中內容 */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
+    box-shadow: none;
+    /* 頂部時無陰影 */
+}
+
+nav.scrolled {
+    padding: 20px 1px;
+    background-color: rgba(0, 0, 0, 1);
+    /* 滾動後變為不透明的黑色 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    /* 增加陰影 */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    /* 使列表項水平排列 */
+    align-items: center;
+    /* 垂直居中 */
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 10px 20px;
+    color: rgb(250, 250, 250);
+}
+
+nav ul li #house {
+    margin-right: 40vw;
+}
+
+nav ul li a:hover {
+    text-decoration: none;
+}
+
+
+.vertical-text,
+.travel,
+.p1,
+#aboutusDetail,
+.p2,
+.roomName,
+.SpaWord,
+#aboutSPA,
+.swimWord {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    /* 使元素淡入顯示 */
+}
+
+.container {
+    display: flex;
+}
+
+.vertical-text-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    /* 設置兩列 */
+    gap: 20px;
+    /* 設置兩列之間的間距 */
+    justify-content: center;
+    /* 水平居中 */
+    text-align: center;
+    /* 文字居中對齊 */
+    flex: 1;
+}
+
+.vertical-text {
+    writing-mode: vertical-rl;
+    /* 垂直排列，從右到左 */
+    text-orientation: upright;
+    /* 文字直立顯示 */
+    font-size: 40px;
+    /* 調整字體大小 */
+    line-height: 1.5;
+    /* 調整行距 */
+    font-family: "Noto Serif TC", serif;
+}
+
+
+.travel {
+    padding: 100px 100px 0px 30px;
+    width: 50%;
+}
+
+.travel img {
+    aspect-ratio: 1 / 1;
+    width: 25%;
+}
+
+.p1 {
+    font-size: 20px;
+    font-family: "Noto Serif TC", serif;
+    margin-left: 45%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: gray;
+    line-height: 45px;
+}
+
+.p2 {
+    font-size: 40px;
+    text-align: center;
+    color: gray;
+    font-family: "Noto Serif TC", serif;
+    padding: 40px 0px;
+}
+
+.leaf1 {
+    transform: rotate(90deg);
+    width: 150px;
+}
+
+.leaf2 {
+    transform: rotate(270deg);
+    width: 150px;
+}
+
+.gallery-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-images {
+    display: flex;
+    transition: transform 0.5s ease;
+    height: 100%;
+    width: 100%;
+}
+
+.gallery-images img {
+    height: 100%;
+    /* 確保圖片高度佔滿容器 */
+    width: 100%;
+    /* 確保圖片寬度佔滿容器 */
+    object-fit: cover;
+    /* 確保圖片不變形，適應容器 */
+    flex: 0 0 auto;
+    /* 不允許圖片縮小 */
+}
+
+
+.button {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.button-left {
+    left: 10px;
+}
+
+.button-right {
+    right: 10px;
+}
+
+h2 {
+    font-size: 45px;
+}
+
+
+#roomColor {
+    background-color: rgb(0, 0, 0);
+    width: 50px;
+}
+
+#roomDetail {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 100px;
+}
+
+.roomName {
+    position: relative;
+    text-align: center;
+    color: white;
+    /* 讓文字從一開始就是白色，清晰顯示 */
+}
+
+.roomName img {
+    width: 500px;
+    height: 400px;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+    /* 讓透明效果平滑過渡 */
+}
+
+/* 在圖片上添加黑色透明層 */
+.roomName::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    /* 初始為透明 */
+    transition: background-color 0.3s ease;
+    z-index: 1;
+    /* 保證黑色透明層位於圖片上方但文字下方 */
+}
+
+.roomName:hover::before {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* 滑鼠移入時變為黑色透明層 */
+}
+
+.centered {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 36px;
+    z-index: 2;
+    /* 確保文字在黑色透明層上方 */
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    margin: 100px;
+}
+
+#aboutusDetail {
+    text-align: center;
+}
+
+#aboutusDetail img {
+    height: 850px;
+    width: 1300px;
+}
+
+#aboutSpaDetail {
+    display: flex;
+    align-items: center;
+    /* 讓圖片和文字垂直居中 */
+}
+
+#aboutSpaDetail img {
+    width: 55%;
+    /* 設置圖片寬度，根據需要調整 */
+    height: auto;
+    margin-right: 20px;
+    /* 調整圖片和文字之間的間距 */
+}
+
+#aboutSPA {
+    font-size: 30px;
+    line-height: 1.5;
+    font-family: "Noto Serif TC", serif;
+}
+
+.SpaWord {
+    transform: rotate(90deg);
+    /* 旋转90度 */
+    transform-origin: center;
+    /* 确保旋转以左上角为中心 */
+    font-size: 70px;
+    /* 根据需要调整字体大小 */
+    margin-left: 100px;
+}
+
+#swimmingPool {
+    background-color: LightCyan;
+    display: flex;
+}
+
+#swimmingPool img {
+    width: 45%;
+    margin-right: 0px;
+    flex: 1;
+}
+
+.swimWord {
+    flex: 1;
+    margin-left: 200px;
+    margin-top: 50px;
+}
+
+.swimWord h2 {
+    font-size: 60px;
+    margin-bottom: 10px;
+    margin-top: 80px;
+}
+
+#aboutSwim {
+    flex: 1;
+    font-size: 33px;
+    font-family: "Noto Serif TC", serif;
+    margin-top: 5px;
+}
+
+
+
+#contactDetail {
+    flex: 1;
+    font-size: 30px;
+    padding: 50px;
+    border-left: rgb(170, 166, 166) solid 2px;
+    margin-left: 100px;
+    display: flex;
+}
+
+#contactDetail div {
+    font-family: "Noto Serif TC", serif;
+}
+
+#contact {
+    font-size: 70px;
+    /* 根据需要调整字体大小 */
+    margin-left: 100px;
+    margin-top: 100px;
+}
+
+.vacation {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10%;
+    margin-left: 100px;
+    margin-top: 200px;
+}
+
+.design {
+    color: gray;
+    text-align: center;
+    margin-bottom: 30px;
+}

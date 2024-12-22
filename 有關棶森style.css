@@ -1,0 +1,25 @@
+.p1, .p2, .p3 {
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* 使元素淡入顯示 */
+}
+
+.p1{
+    font-size: 50px;
+    text-align: center;
+    font-family: "Noto Serif TC", serif;
+    margin: 60px;
+}
+
+.p2{
+    text-align: center;
+}
+
+.p3{
+    font-size: 30px;
+    margin: 100px 350px;
+    padding: 30px;
+    font-family: "Noto Serif TC", serif;
+    background-color:Cornsilk;
+    border-radius: 10%;
+    border: 2px rgb(0, 0, 0) solid;;
+}
