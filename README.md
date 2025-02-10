@@ -9,7 +9,7 @@
 ▸開發工具：VS Code
 
 ▸網站架構圖：
-![image](https://github.com/verdurasss/midternProject/blob/main/%E6%A3%B6.png)
+![image](https://github.com/verdurasss/midternProject/blob/main/%E6%A3%B6.png){:height:"50%"}
 
 ▸使用者體驗：設計直覺式導覽，優化按鈕點擊與滾動效果、互動式滾動顯示效果
 
